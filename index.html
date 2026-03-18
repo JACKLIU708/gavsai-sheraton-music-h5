@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <meta name="theme-color" content="#121418" />
+  <title>GAVSAI × 喜来登｜声音系统</title>
+  <meta
+    name="description"
+    content="GAVSAI × 喜来登声音系统扫码进入页，包含白噪音、轻音乐、10分钟助眠三类音频播放入口。"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <h1 class="brand-title">GAVSAI × 喜来登</h1>
+        <p class="brand-subtitle">声音系统 · 扫码进入</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="audio-list" aria-label="声音播放列表">
+        <article class="audio-card" data-id="whiteNoise">
+          <div class="card-top">
+            <div class="card-copy">
+              <h2 class="card-title">白噪音</h2>
+              <p class="card-desc">
+                帮助屏蔽环境杂音，营造更安静舒适的休息氛围
+              </p>
+            </div>
+
+            <button
+              class="play-btn"
+              type="button"
+              data-action="toggle"
+              data-id="whiteNoise"
+              aria-label="播放白噪音"
+            >
+              <span class="icon icon-play" aria-hidden="true">▶</span>
+              <span class="icon icon-pause" aria-hidden="true">❚❚</span>
+            </button>
+          </div>
+
+          <div class="card-bottom">
+            <div class="status-row">
+              <span class="status-text" id="status-whiteNoise">未播放</span>
+            </div>
+
+            <div
+              class="progress-container"
+              role="progressbar"
+              aria-label="白噪音播放进度"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <div class="progress-bar" id="progress-whiteNoise"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="audio-card" data-id="lightMusic">
+          <div class="card-top">
+            <div class="card-copy">
+              <h2 class="card-title">轻音乐</h2>
+              <p class="card-desc">
+                舒缓旋律，帮助身心放松，适合休憩与夜间陪伴
+              </p>
+            </div>
+
+            <button
+              class="play-btn"
+              type="button"
+              data-action="toggle"
+              data-id="lightMusic"
+              aria-label="播放轻音乐"
+            >
+              <span class="icon icon-play" aria-hidden="true">▶</span>
+              <span class="icon icon-pause" aria-hidden="true">❚❚</span>
+            </button>
+          </div>
+
+          <div class="card-bottom">
+            <div class="status-row">
+              <span class="status-text" id="status-lightMusic">未播放</span>
+            </div>
+
+            <div
+              class="progress-container"
+              role="progressbar"
+              aria-label="轻音乐播放进度"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <div class="progress-bar" id="progress-lightMusic"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="audio-card" data-id="sleep10Min">
+          <div class="card-top">
+            <div class="card-copy">
+              <h2 class="card-title">10分钟助眠</h2>
+              <p class="card-desc">
+                适合睡前短时放松，帮助自然进入休息状态
+              </p>
+            </div>
+
+            <button
+              class="play-btn"
+              type="button"
+              data-action="toggle"
+              data-id="sleep10Min"
+              aria-label="播放10分钟助眠"
+            >
+              <span class="icon icon-play" aria-hidden="true">▶</span>
+              <span class="icon icon-pause" aria-hidden="true">❚❚</span>
+            </button>
+          </div>
+
+          <div class="card-bottom">
+            <div class="status-row">
+              <span class="status-text" id="status-sleep10Min">未播放</span>
+            </div>
+
+            <div
+              class="progress-container"
+              role="progressbar"
+              aria-label="10分钟助眠播放进度"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <div class="progress-bar" id="progress-sleep10Min"></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="control-panel" aria-label="播放控制区">
+        <button class="stop-btn" id="stopAllBtn" type="button">
+          停止播放
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-text">仅供客房住客在房间内使用</p>
+      <p class="footer-text">请根据个人习惯调节合适音量</p>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
